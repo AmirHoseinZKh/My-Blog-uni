@@ -1,0 +1,14 @@
+@font-face {
+    font-family: wotfard1;
+    src: url(../files/wotfard/wotfard-medium-webfont.woff2);
+}
+
+@font-face {
+    font-family: wotfard2;
+    src: url(../files/wotfard/wotfard-regular-webfont.woff2);
+}
+
+@font-face {
+    font-family: wotfard3;
+    src: url(../files/wotfard/wotfard-semibold-webfont.woff2);
+}

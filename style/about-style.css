@@ -1,0 +1,262 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--subtle, #EFF1F5);
+}
+
+header{
+    backdrop-filter: blur(10px);
+
+    width: 100%;
+    position: sticky;
+    top: 0;
+    padding: 32px 0;
+    z-index: 3;
+}
+
+header > .navbar{    
+    margin-left: 160px;
+    margin-right: 160px;
+    display: flex;
+    align-items: center;
+}
+
+header  .navbar--icon{
+    margin-right: 80px;
+    font-family: wotfard3;
+    font-size: 22px;
+    color: var(--text, #0A0C10);
+}
+
+header .nav-items ul{
+    display: flex;
+    gap: 32px;
+
+    font-family: wotfard1;
+    font-size: 16px;
+}
+
+header .nav-items ul a{
+    color: var(--text, #0A0C10);
+}
+
+header .nav-items .articles{
+    color: var(--primary, #43F);
+}
+
+header span{
+    margin-left: auto;
+}
+
+main{
+    padding: 70px 160px 80px 160px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+main .images{
+    display: flex;
+    gap: 32px;
+}
+
+main .about-text{
+    width: 650px;
+    margin-left: 279px;
+    margin-top: 28px;
+
+    display: flex;
+    gap: 35px;
+}
+
+.title p{
+    width: 74px;
+    color: var(--grey, #5A6072);
+    font-family: Wotfard2;
+    font-size: 16px;
+}
+
+main .socialmedia{
+    margin-left: 289px;
+    display: flex;
+    gap: 34px;
+}
+
+.socialmedia .socialmedia-title{
+    color: var(--grey, #5A6072);
+    font-family: Wotfard2;
+    font-size: 16px;
+}
+
+.socialmedia .socialmedia-links ul{
+    display: flex;
+    gap: 24px;
+}
+
+.socialmedia-links ul li a{
+    color: var(--text, #0A0C10);
+    font-family: Wotfard2;
+    font-size: 16px;
+    text-decoration-line: underline;
+}
+
+main .work{
+    margin-left: 312px;
+    display: flex;
+    gap: 40px;
+}
+
+.work .work-title{
+    color: var(--grey, #5A6072);
+    font-family: Wotfard2;
+    font-size: 16px;
+}
+
+.work .work-elements{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.work .work-element{
+    width: 545px;
+
+    display: flex;
+    gap: 20px;
+}
+
+.work .work-element .element-data{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.work-element .element-data .p1{
+    color: var(--text, #0A0C10);
+    font-family: Wotfard2;
+    font-size: 24px;
+}
+
+.work-element .element-data .p2{
+    color: var(--text, #0A0C10);
+    font-family: Wotfard2;
+    font-size: 16px;
+}
+
+.work-element span{
+    margin-left: auto;
+
+    color: var(--text, #0A0C10);
+    font-family: Wotfard2;
+    font-size: 16px;
+}
+
+main .sideProject{
+    margin-left: 255px;
+    display: flex;
+    gap: 33px;
+}
+
+.sideProject .sideProject-title{
+    color: var(--grey, #5A6072);
+    font-family: Wotfard2;
+    font-size: 16px;
+}
+
+.sideProject .sideProject-elements{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.sideProject .sideProject-element{
+    width: 545px;
+
+    display: flex;
+    gap: 20px;
+}
+
+.sideProject .sideProject-element .element-info{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.sideProject-element .element-info .p1{
+    color: var(--text, #0A0C10);
+    font-family: Wotfard2;
+    font-size: 24px;
+}
+
+.sideProject-element .element-info .p2{
+    color: var(--text, #0A0C10);
+    font-family: Wotfard2;
+    font-size: 16px;
+}
+
+footer{
+    background: rgb(194, 224, 243);
+
+    display: flex;
+}
+
+footer .info{
+    margin-left: 169px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+
+
+    display: flex;
+    flex-direction: column;
+}
+
+footer .info .s1{
+    font-family: Wotfard3;
+    font-size: 22px;
+    color: var(--text, #0A0C10);
+}
+
+footer .info .s2{
+    margin-top: 16px;
+    font-family: Wotfard1;
+    font-size: 14px;
+    color: var(--text, #0A0C10);
+}
+
+footer .info .s3{
+    margin-top: auto;
+    margin-bottom: 32px;
+
+    font-family: Wotfard2;
+    font-size: 12px;
+    color: var(--grey, #5A6072);
+}
+
+footer .connection{
+    margin-left: auto;
+    margin-right: 199px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+}
+
+footer .connection p{
+    font-family: Wotfard2;
+    font-size: 14px;
+    color: var(--grey, #5A6072);
+}
+
+footer .connection a{
+    font-family: Wotfard2;
+    font-size: 14px;
+    color: var(--text, #0A0C10);
+}
