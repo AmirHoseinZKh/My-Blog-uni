@@ -57,6 +57,7 @@ header span{
 .hero-section h1{
     padding-top: 124px;
     margin-left: 160px;
+    padding-bottom: 48px;
 
     color: var(--text, #0A0C10);
     font-family: Wotfard3;
@@ -87,6 +88,8 @@ main .content{
 }
 
 .content .data{
+    margin-bottom: 64px;
+
     display: flex;
     flex-flow: column;
     gap: 16px;
@@ -100,6 +103,17 @@ main .content{
 
 .content .data img{
     width: 100%;
+}
+
+.data .data-element ul li{
+    margin-bottom: 16px;
+
+    display: flex;
+    gap: 21px;
+}
+
+.data-element li span{
+    margin-top: 3px;
 }
 
 main aside{
@@ -136,6 +150,7 @@ aside ul .aside-p1{
 
 footer{
     background: rgb(194, 224, 243);
+    margin-bottom: -18px;
 
     display: flex;
 }
