@@ -1,13 +1,17 @@
 *{
     margin: 0;
     padding: 0;
-    text-decoration: none;
+    text-decoration: none !important;
     list-style: none;
     box-sizing: border-box;
 }
 
 body{
     background: linear-gradient(180deg, #BFDEF2 0%, #D3EAF8 100%);
+}
+
+.container{
+    max-width: 1140px !important;
 }
 
 header{
@@ -20,49 +24,46 @@ header{
     z-index: 3;
 }
 
-header > .navbar{
-    /* border: 1px solid red; */
-    
-    margin-left: 160px;
-    margin-right: 160px;
-    display: flex;
-    align-items: center;
+header > .navbar{    
+    max-width: 1140px;
 }
 
-header  .navbar--icon{
-    margin-right: 80px;
+header  .navbar-item{
     font-family: wotfard3;
     font-size: 22px;
+    text-decoration: none;
     color: var(--text, #0A0C10);
 }
 
-header .nav-items ul{
-    display: flex;
-    gap: 32px;
-
+header .navbar-nav ul{
+    margin-top: 15px;
     font-family: wotfard1;
     font-size: 16px;
 }
 
-header .nav-items ul a{
+header .navbar-nav ul a{
+    text-decoration: none;
     color: var(--text, #0A0C10);
 }
 
-header span{
+header .navbar-icon{
     margin-left: auto;
 }
 
 .hero-section{
-    /* border: 1px solid red; */
     margin-top: 100px;
     width: 100%;
-}
+    }
 
-.hero-section h1{
+.hero-section .hero-section-title{
     font-family: Wotfard3;
     font-size: 38px;
     color: var(--text, #0A0C10);
-    margin-left: 156px;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.hero-section-title h1{
 }
 
 .hero-section svg{
@@ -70,23 +71,25 @@ header span{
     margin-top: 35px;
 }
 
+
+@media screen and (width < 768px) {
+    .hero-section .hero-section-title{
+        font-size: 24px;
+    }
+}
+
 main{
     width: 100%;
-    height: 852px;
-    background: #fff;
+    box-shadow: 0 0 0 100vmax white;
+    background: white;
+    clip-path: inset(0 -100vmax);
     margin-top: -5px;
-    position: relative;
-    padding: 56px 160px 56px 160px;
-
-    display: grid;
-    grid-template-columns: 6fr 4fr;
-    grid-template-rows: 1fr 9fr;
+    position: relative !important;
 }
 
 main .s1{
     width: 544px;
     height: 15px;
-    margin-right: 224px;
     color: var(--secondary, #E60067);
     font-family: wotfard3;
     font-size: 12px;
@@ -100,16 +103,6 @@ main .s2{
     color: var(--secondary, #E60067);
     font-family: wotfard3;
     font-size: 12px;
-}
-
-main .content{
-    width: 544px;
-    height: 684px;
-    margin-right: 192px;
-
-    display: flex;
-    flex-flow: column;
-    gap: 48px;
 }
 
 main .content a:hover div h2{
@@ -147,18 +140,14 @@ main .content .elements span{
     color: var(--text, #0A0C10);
 }
 
-main aside{
-    width: 384px;
-    height: 171px;
-
+main aside .aside--elements{
     position: sticky;
-    top: 150px;
+    top: 170px;
 }
 
 main aside .aside--elements ul{
     display: flex;
     flex-flow: column;
-    gap: 16px;
 }
 
 main aside .aside--elements ul li:hover svg{
@@ -175,7 +164,7 @@ main aside .aside--elements ul li p{
     font-family: Wotfard1;
     font-size: 19px;
     color: var(--text, #0A0C10);
-   width: 100%;
+    width: 100%;
 }
 .svg-holder{
     width: 11px;
@@ -190,18 +179,9 @@ main aside .aside--elements ul li svg{
 }
 
 
-footer{
-    display: flex;
-}
-
 footer .info{
-    margin-left: 169px;
     margin-top: 32px;
     margin-bottom: 32px;
-
-
-    display: flex;
-    flex-flow: column;
 }
 
 footer .info .s1{
@@ -227,8 +207,6 @@ footer .info .s3{
 }
 
 footer .connection{
-    margin-left: auto;
-    margin-right: 199px;
     margin-top: 32px;
     margin-bottom: 32px;
 
@@ -248,3 +226,4 @@ footer .connection a{
     font-size: 14px;
     color: var(--text, #0A0C10);
 }
+
