@@ -7,7 +7,7 @@
 }
 
 body{
-    background: var(--subtle, #EFF1F5);
+    background: var(--subtle) !important;
 }
 
 header{
@@ -21,118 +21,109 @@ header{
     z-index: 3;
 }
 
-header > .navbar{
-    /* border: 1px solid red; */
-    
-    margin-left: 160px;
-    margin-right: 160px;
-    display: flex;
-    align-items: center;
+.container{
+    max-width: 1140px !important;
 }
 
-header  .navbar--icon{
-    margin-right: 80px;
+header > .navbar{    
+    max-width: 1140px;
+}
+
+header  .navbar-item{
     font-family: wotfard3;
     font-size: 22px;
-    color: var(--text, #0A0C10);
+    color: var(--text-color);
+    text-decoration: none;
 }
 
-header .nav-items ul{
-    display: flex;
-    gap: 32px;
-
+header .navbar-nav ul{
+    margin-top: 15px;
     font-family: wotfard1;
     font-size: 16px;
 }
 
-header .nav-items ul a{
-    color: var(--text, #0A0C10);
+header .navbar-nav ul a{
+    color: var(--text-color);
+    text-decoration: none;
 }
 
-header .nav-items .articles{
-    color: var(--primary, #43F);
-}
-
-header span{
-    margin-left: auto;
+header .navbar-nav .articles{
+    color: var(--primary-color);
 }
 
 main{
-    padding: 124px 160px 187px 160px;
-
-    display: flex;
-    flex-flow: column;
-    gap: 48px;
+    width: 100%;
+    margin-top: 124px;
 }
 
 .title h1{
+    margin-bottom: 48px;
     font-family: Wotfard3;
     font-size: 38px;
-    color: var(--text, #0A0C10);
+    color: var(--text-color);
 }
 
-.articles-box{
-    display: flex;
-    gap: 32px;
-    flex-flow: row wrap;
-}
-
-.articles-box a .article{
-    background: #fff;
+.articles-box a{
+    background: var(--white-color) ;
     border-radius: 8px;
-
-    width: 544px;
     height: 250px;
-    padding: 16px;
 
-    display: flex;
-    flex-flow: column;
-    gap: 16px;
+    text-decoration: none;
+}
+
+@media screen and (width <= 1120px){
+    .articles-box a{
+        height: 344px;
+    }
+}
+
+@media screen and (width <= 768px){
+    .articles-box{
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+    
 }
 
 .articles-box a .article h2{
-    color: var(--text, #0A0C10);
+    color: var(--text-color);
     font-family: Wotfard3;
     font-size: 22px;
 }
 
 .articles-box a .article p{
-    color: var(--text, #0A0C10);
+    color: var(--text-color);
     font-family: Wotfard2;
     font-size: 16px;
 }
 
 .articles-box a .article h3{
-    color: var(--text, #0A0C10);
+    color: var(--text-color);
     font-family: Wotfard3;
     font-size: 16px;
 }
 
 footer{
-    display: flex;
+    margin-top: 187px;
 }
 
 footer .info{
-    margin-left: 169px;
     margin-top: 32px;
     margin-bottom: 32px;
-
-
-    display: flex;
-    flex-flow: column;
 }
 
 footer .info .s1{
     font-family: Wotfard3;
     font-size: 22px;
-    color: var(--text, #0A0C10);
+    color: var(--text-color);
 }
 
 footer .info .s2{
     margin-top: 16px;
     font-family: Wotfard1;
     font-size: 14px;
-    color: var(--text, #0A0C10);
+    color: var(--text-color);
 }
 
 footer .info .s3{
@@ -141,12 +132,10 @@ footer .info .s3{
 
     font-family: Wotfard2;
     font-size: 12px;
-    color: var(--grey, #5A6072);
+    color: var(--gray-color);
 }
 
 footer .connection{
-    margin-left: auto;
-    margin-right: 199px;
     margin-top: 32px;
     margin-bottom: 32px;
 
@@ -155,14 +144,20 @@ footer .connection{
     gap: 21px;
 }
 
+@media screen and (width >= 768px){
+    footer .connection{
+        margin-right: 0;
+    }
+}
+
 footer .connection p{
     font-family: Wotfard2;
     font-size: 14px;
-    color: var(--grey, #5A6072);
+    color: var(--gray-color);
 }
 
 footer .connection a{
     font-family: Wotfard2;
     font-size: 14px;
-    color: var(--text, #0A0C10);
+    color: var(--text-color);
 }

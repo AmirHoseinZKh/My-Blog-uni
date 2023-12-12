@@ -7,7 +7,11 @@
 }
 
 body{
-    background: var(--subtle, #EFF1F5);
+    background: var(--subtle);
+}
+
+.container{
+    max-width: 1140px !important;
 }
 
 header{
@@ -21,212 +25,183 @@ header{
 }
 
 header > .navbar{    
-    margin-left: 160px;
-    margin-right: 160px;
-    display: flex;
-    align-items: center;
+     max-width: 1140px;
 }
 
-header  .navbar--icon{
-    margin-right: 80px;
+header  .navbar-item{
     font-family: wotfard3;
     font-size: 22px;
-    color: var(--text, #0A0C10);
+    color: var(--text-color);
+    text-decoration: none;
 }
 
-header .nav-items ul{
-    display: flex;
-    gap: 32px;
-
+header .navbar-nav ul{
+    margin-top: 15px;
     font-family: wotfard1;
     font-size: 16px;
 }
 
-header .nav-items ul a{
-    color: var(--text, #0A0C10);
+header .navbar-nav ul a{
+    color: var(--text-color);
+    text-decoration: none;
 }
 
-header .nav-items .articles{
-    color: var(--primary, #43F);
-}
-
-header span{
-    margin-left: auto;
+header .navbar-nav .about-us{
+    color: var(--primary-color);
 }
 
 main{
-    padding: 70px 160px 80px 160px;
+    padding: 70px 0 80px 0;
 
     display: flex;
     flex-direction: column;
     gap: 48px;
 }
 
-main .images{
-    display: flex;
-    gap: 32px;
+@media screen and (width <= 1120px){
+    .images .seconde{
+        display: none;
+    }
+
+    .images .first{
+        width: 330px;
+        height: 360px;
+    }
+
+    .images .third{
+        width: 330px;
+        height: 360px;
+    }
+}
+
+@media screen and (width <= 768px){
+    .images .third{
+        display: none;
+    }
+
+    .images .first{
+        width: 360px;
+        height: 360px;
+    }
 }
 
 main .about-text{
-    width: 650px;
-    margin-left: 279px;
-    margin-top: 28px;
-
-    display: flex;
-    gap: 35px;
+    max-width: 1140px;
 }
 
 .title p{
-    width: 74px;
-    color: var(--grey, #5A6072);
+    max-width: 1140px;
+    color: var(--gray-color);
     font-family: Wotfard2;
     font-size: 16px;
+    text-align: center;
 }
 
 main .socialmedia{
-    margin-left: 289px;
-    display: flex;
-    gap: 34px;
+    max-width: 1140px;
+    margin-left: 200px;
+}
+
+@media screen and (width <= 768px){
+    main .socialmedia{
+        margin-left: 15px;
+    }
 }
 
 .socialmedia .socialmedia-title{
-    color: var(--grey, #5A6072);
+    color: var(--gray-color);
     font-family: Wotfard2;
     font-size: 16px;
 }
 
-.socialmedia .socialmedia-links ul{
-    display: flex;
-    gap: 24px;
-}
-
 .socialmedia-links ul li a{
-    color: var(--text, #0A0C10);
+    color: var(--text-color);
     font-family: Wotfard2;
     font-size: 16px;
     text-decoration-line: underline;
 }
 
 main .work{
-    margin-left: 312px;
-    display: flex;
-    gap: 40px;
+    margin-left: 205px;   
+}
+
+@media screen and (width <= 768px){
+    main .work{
+        margin-left: 5px;
+    }
 }
 
 .work .work-title{
-    color: var(--grey, #5A6072);
+    color: var(--gray-color);
     font-family: Wotfard2;
     font-size: 16px;
 }
 
-.work .work-elements{
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-}
-.work .work-element{
-    width: 545px;
-
-    display: flex;
-    gap: 20px;
-}
-
-.work .work-element .element-data{
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.work-element .element-data .p1{
-    color: var(--text, #0A0C10);
+.work-elements .card .card-title{
+    color: var(--text-color);
     font-family: Wotfard2;
-    font-size: 24px;
+    font-size: 24px;   
 }
 
-.work-element .element-data .p2{
-    color: var(--text, #0A0C10);
+.work-elements .card .card-text{
+    color: var(--text-color);
     font-family: Wotfard2;
-    font-size: 16px;
-}
-
-.work-element span{
-    margin-left: auto;
-
-    color: var(--text, #0A0C10);
-    font-family: Wotfard2;
-    font-size: 16px;
+    font-size: 16px;   
 }
 
 main .sideProject{
-    margin-left: 255px;
-    display: flex;
-    gap: 33px;
+    margin-left: 174px;
+}
+
+@media screen and (width <= 768px){
+    main .sideProject{
+        margin-left: -28px;
+    }
+    .sideProject .sideProject-title{
+        padding-left: 28px;
+    }
 }
 
 .sideProject .sideProject-title{
-    color: var(--grey, #5A6072);
+    color: var(--gray-color);
     font-family: Wotfard2;
     font-size: 16px;
-}
+} 
 
-.sideProject .sideProject-elements{
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-}
-
-.sideProject .sideProject-element{
-    width: 545px;
-
-    display: flex;
-    gap: 20px;
-}
-
-.sideProject .sideProject-element .element-info{
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.sideProject-element .element-info .p1{
-    color: var(--text, #0A0C10);
+.sideProject-elements .card .card-title{
+    color: var(--text-color);
     font-family: Wotfard2;
     font-size: 24px;
 }
 
-.sideProject-element .element-info .p2{
-    color: var(--text, #0A0C10);
+.sideProject-elements .card .card-text{
+    color: var(--text-color);
     font-family: Wotfard2;
     font-size: 16px;
 }
 
 footer{
-    background: rgb(194, 224, 243);
-
-    display: flex;
+    box-shadow: 0 0 0 100vmax #bfdef2;
+    background: #bfdef2;
+    clip-path: inset(0 -100vmax);
 }
 
 footer .info{
-    margin-left: 169px;
     margin-top: 32px;
     margin-bottom: 32px;
-
-
-    display: flex;
-    flex-direction: column;
 }
 
 footer .info .s1{
     font-family: Wotfard3;
     font-size: 22px;
-    color: var(--text, #0A0C10);
+    color: var(--text-color);
 }
 
 footer .info .s2{
     margin-top: 16px;
     font-family: Wotfard1;
     font-size: 14px;
-    color: var(--text, #0A0C10);
+    color: var(--text-color);
 }
 
 footer .info .s3{
@@ -235,12 +210,10 @@ footer .info .s3{
 
     font-family: Wotfard2;
     font-size: 12px;
-    color: var(--grey, #5A6072);
+    color: var(--gray-color);
 }
 
 footer .connection{
-    margin-left: auto;
-    margin-right: 199px;
     margin-top: 32px;
     margin-bottom: 32px;
 
@@ -249,14 +222,20 @@ footer .connection{
     gap: 21px;
 }
 
+@media screen and (width >= 768px){
+    footer .connection{
+        margin-right: 0;
+    }
+}
+
 footer .connection p{
     font-family: Wotfard2;
     font-size: 14px;
-    color: var(--grey, #5A6072);
+    color: var(--gray-color);
 }
 
 footer .connection a{
     font-family: Wotfard2;
     font-size: 14px;
-    color: var(--text, #0A0C10);
+    color: var(--text-color);
 }

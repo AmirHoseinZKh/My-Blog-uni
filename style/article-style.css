@@ -6,43 +6,41 @@
     box-sizing: border-box;
 }
 
+.container{
+    max-width: 1140px !important;
+}
+
 
 header{
-    background: rgb(194, 224, 243);
+    background: rgb(194, 224, 244);
     width: 100%;
-    /* height: 280px; */
     position: sticky;
     top: 0;
     padding: 32px 0;
     z-index: 3;
 }
 
-header > .navbar{
-    /* border: 1px solid red; */
-    
-    margin-left: 160px;
-    margin-right: 160px;
-    display: flex;
-    align-items: center;
+header > .navbar{    
+    max-width: 1140px !important;
 }
 
-header  .navbar--icon{
-    margin-right: 80px;
+header  .navbar-item{
     font-family: wotfard3;
     font-size: 22px;
-    color: var(--text, #0A0C10);
+    color: var(--text-color);
+    text-decoration: none;
 }
 
-header .nav-items ul{
-    display: flex;
-    gap: 32px;
+header .navbar-nav ul{
+    margin-top: 15px;
 
     font-family: wotfard1;
     font-size: 16px;
 }
 
-header .nav-items ul a{
-    color: var(--text, #0A0C10);
+header .navbar-nav ul a{
+    text-decoration: none;
+    color: var(--text-color);
 }
 
 header span{
@@ -50,23 +48,23 @@ header span{
 }
 
 .hero-section{
-    background: rgb(194, 224, 243);
+    background: var(--background-gradiant);
     width: 100%;
 }
 
-.hero-section h1{
+.hero-section .hero-section-title{
     padding-top: 124px;
-    margin-left: 160px;
     padding-bottom: 48px;
+    max-width: 1140px;
+    margin: 0 auto;
 
-    color: var(--text, #0A0C10);
+    color: var(--text-color);
     font-family: Wotfard3;
     font-size: 38px;
 }
 
 main{
-    padding: 72px 160px 178px 160px;
-
+    padding: 72px 0 178px 0;
     position: relative;
 
     display: flex;
@@ -74,15 +72,13 @@ main{
 }
 
 main .content{
-    width: 736px;
-
     display: flex;
     flex-flow: column;
     gap: 32px;
 }
 
 .content h2{
-    color: var(--primary, #43F);
+    color: var(--primary-color);
     font-family: Wotfard3;
     font-size: 32px;
 }
@@ -96,7 +92,7 @@ main .content{
 }
 
 .content .data p{
-    color: var(--text, #0A0C10);
+    color: var(--text-color);
     font-family: Wotfard2;
     font-size: 19px;
 }
@@ -125,8 +121,24 @@ main aside{
     top: 350px;
 }
 
+@media screen and (width < 768px) {
+    main{
+        padding-bottom: 36px;
+    }
+
+    main aside{
+        display: none;
+    }
+}
+
+@media screen and (width < 1120px) {
+    main{
+        padding-bottom: 32px;
+    }
+}
+
 aside h3{
-    color: var(--text, #0A0C10);
+    color: var(--text-color);
     font-family: Wotfard3;
     font-size: 16px;
     letter-spacing: 2px;
@@ -139,43 +151,38 @@ aside ul{
 }
 
 aside ul p{
-    color: var(--grey, #5A6072);
+    color: var(--gray-color);
     font-family: Wotfard3;
     font-size: 16px;
 }
 
 aside ul .aside-p1{
-    color: var(--primary, #43F);
+    color: var(--primary-color);
 }
 
 footer{
-    background: rgb(194, 224, 243);
-    margin-bottom: -18px;
-
-    display: flex;
+    box-shadow: 0 0 0 100vmax #bfdef2;
+    background: #bfdef2;
+    clip-path: inset(0 -100vmax);
+    margin-bottom: -25px;
 }
 
 footer .info{
-    margin-left: 169px;
     margin-top: 32px;
     margin-bottom: 32px;
-
-
-    display: flex;
-    flex-flow: column;
 }
 
 footer .info .s1{
     font-family: Wotfard3;
     font-size: 22px;
-    color: var(--text, #0A0C10);
+    color: var(--text-color);
 }
 
 footer .info .s2{
     margin-top: 16px;
     font-family: Wotfard1;
     font-size: 14px;
-    color: var(--text, #0A0C10);
+    color: var(--text-color);
 }
 
 footer .info .s3{
@@ -184,28 +191,32 @@ footer .info .s3{
 
     font-family: Wotfard2;
     font-size: 12px;
-    color: var(--grey, #5A6072);
+    color: var(--gray-color);
 }
 
 footer .connection{
-    margin-left: auto;
-    margin-right: 199px;
     margin-top: 32px;
     margin-bottom: 32px;
 
     display: flex;
-    flex-flow: column;
+    flex-direction: column;
     gap: 21px;
+}
+
+@media screen and (width >= 768px){
+    footer .connection{
+        margin-right: 0;
+    }
 }
 
 footer .connection p{
     font-family: Wotfard2;
     font-size: 14px;
-    color: var(--grey, #5A6072);
+    color: var(--gray-color);
 }
 
 footer .connection a{
     font-family: Wotfard2;
     font-size: 14px;
-    color: var(--text, #0A0C10);
+    color: var(--text-color);
 }

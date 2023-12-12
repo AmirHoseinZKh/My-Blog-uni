@@ -1,0 +1,13 @@
+:root {
+    --subtle: #eff1f5;
+    --muted: #dfebf6;
+    --primary-color: #4433ff;
+    --secondary-color: #e60067;
+    --decorative-color: #63bce9;
+    --text-color: #0a0c10;
+    --gray-color: #5a6072;
+    --white-color: #ffffff;
+    --homepage-light: #bfdef2;
+    --homepage-dark: #d3eaf8;
+    --background-gradiant: linear-gradient(#bfdef2 0%, #d3eaf8 100%);
+  }
